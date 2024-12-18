@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Folty';
+    src: local('Folty SemiBold'), local('Folty-SemiBold'),
+        url('Folty-SemiBold.woff2') format('woff2'),
+        url('Folty-SemiBold.woff') format('woff'),
+        url('Folty-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
