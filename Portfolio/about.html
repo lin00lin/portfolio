@@ -3,40 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hung-Hsuan Lin</title>
+    <title>Hung-Hsuan Lin|About me</title>
     <link rel="stylesheet" href="style.css"> <!-- 共享同一個 CSS 文件 -->
 </head>
 <body>
     <!-- 頁首導覽 -->
-    <header>
+    <header class="about-page">
         <div class="logo">
-            <img src="images/紅色四角星.png" alt="Star" class="star-icon">
-            Hung-Hsuan Lin
+            <a href="index.html">
+                <img src="images/紅色四角星.png" alt="Star" class="star-icon">
+                Hung-Hsuan Lin
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li> <!-- 返回首頁 -->
                 <li><a href="about.html">About me</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#work">Work</a></li>
+                <a href="#contact" class="btn">Get in touch!</a>
             </ul>
         </nav>
     </header>
 
     <!-- About me 內容 -->
     <main>
-        <section class="about">
-            <h1>About Me</h1>
-            <p>
-                Hello! I am Hung-Hsuan Lin, passionate about technology, design, and programming. 
-                I love blending creativity and precision to develop impactful solutions.
-            </p>
+        
+        <!-- 第一區塊米白色畫布 -->
+        <section class="about-container1">
+            <div class="intro-text">
+                <h1>Hello,</h1>
+                <h2>I’m Lin !</h2>
+                <p>
+                    I am a technology enthusiast and developer. My experience spans robotics, machine learning, and visual computing. Currently, I am living in Taiwan and focused on building intelligent systems that bridge innovation and real-world impact, while continually exploring new challenges in technology and system design.
+                </p>
+            </div>
+
+            <div class="profile-wrapper">
+                <div class="profile-image">
+                    <img src="images/側面照.png" alt="Hung-Hsuan Photo">
+                    <div class="tag top-left">1<sup>st</sup> September 2000</div>
+                    <div class="tag bottom-right">Taiwanese</div>
+                </div>
+                <div class="contact-card">
+                    <h3>Contact</h3>
+                    <p>📍 Tainan, Taiwan</p>
+                    <p>✉️ lineric0901@gmail.com</p>
+                    <p>📞 +886-902211908</p>
+                </div>
+            </div>
         </section>
+
+        <!-- 第二區塊深綠色畫布 -->
+        <section class="about-container2">
+            <div class="resume-background">
+                <span>RESUME</span>
+                <span>RESUME</span>
+                <span>RESUME</span>
+            </div>
+
+            <div class="education-section">
+                <h1 class="education-title">Education</h1>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="timeline-icon">
+                            <img src="images/紅色四角星.png" alt="Star Icon">
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="education-content">
+                            <h3>2021 - 2025</h3>
+                            <p>
+                                <strong>National Yang Ming Chiao Tung University</strong><br>
+                                Computer Science and Information Engineering 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="timeline-icon">
+                            <img src="images/紅色四角星.png" alt="Star Icon">
+                        </div>
+                        <div class="education-content">
+                            <h3>2015 - 2018</h3>
+                            <p>
+                                <strong>Kang Ming Senior High School</strong><br>
+                                Mathematics and Science Gifted Class
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technical-skills-section">
+                <h2 class="skills-title">Technical skills</h2>
+                <div class="skills-container">
+                    <!-- 第一列 -->
+                    <div class="skill-group">
+                        <div class="column1">
+                            <h3>Programming</h3>
+                            <ul>
+                                <li style="display: flex; gap: 75px;">
+                                    <span>C++</span>
+                                    <span>JavaScript</span>
+                                </li>
+                                <li style="display: flex; gap: 50px;">
+                                    <span>Python</span>
+                                    <span>HTML</span>
+                                </li>
+                                <li style="display: flex; gap: 90px;">
+                                    <span>C</span>
+                                    <span>CSS</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 第二列 -->
+                    <div class="skill-group">
+                        <div class="column2">
+                            <h3>Development Tools and Frameworks</h3>
+                            <ul>
+                                <li style="display: flex;">
+                                    <span style="margin-right: 90px;">TensorFlow</span> <!-- 第一個和第二個間距 -->
+                                    <span style="margin-right: 80px;">Android Studio</span> <!-- 第二個和第三個間距 -->
+                                    <span>MATLAB</span>
+                                </li>
+                                <li style="display: flex;">
+                                    <span style="margin-right: 111px;">PyTorch</span> <!-- 第一個和第二個間距 -->
+                                    <span style="margin-right: 113px;">Mediapipe</span> <!-- 第二個和第三個間距 -->
+                                    <span>Apache Kafka</span>
+                                </li>
+                                <li style="display: flex;">
+                                    <span style="margin-right: 119px;">Docker</span> <!-- 第一個和第二個間距 -->
+                                    <span style="margin-right: 144px;">Yolov9</span> <!-- 第二個和第三個間距 -->
+                                    <span>Apache Flink</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 第三列 -->
+                    <div class="skill-group">
+                        <div class="column3">
+                            <h3>Platforms</h3>
+                            <ul>
+                                <li style="display: flex; gap: 117px;">
+                                    <span>Linux</span>
+                                    <span>VS Code</span>
+                                </li>
+                                <li style="display: flex; gap: 55px;">
+                                    <span>Raspberry Pi</span>
+                                    <span>ESP32</span>
+                                </li>
+                                <li style="display: flex; gap: 40px;">
+                                    <span>Android Studio</span>
+                                    <span>Roboflow</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skills-tags">
+                        <div class="expertise">Web Design</div>
+                        <div class="expertise">UI/UX</div>
+                        <div class="expertise">System Design</div>
+                        <div class="expertise">Robotics Development</div>
+                        <div class="expertise">Computer Vision</div>
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="experience-section">
+                <h2 class="experience-title">Experience</h2>
+                <div class="experience-item">
+                    <div class="timeline-icon">
+                        <img src="images/白色四角星.png" alt="Star Icon">
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>2023 - 2025</h3>
+                        <p>
+                            <strong>Research Assistant</strong><br>
+                            Designed a Bluetooth RSSI and image recognition-based payload trolley for real-time user tracking.<br>
+                            <span>IoT System Laboratory, CCIT</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="timeline-icon">
+                        <img src="images/白色四角星.png" alt="Star Icon">
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>2023 - 2025</h3>
+                        <p>
+                            <strong>Internship Leadership Cadres</strong><br>
+                            Oversaw military training, recruitment, and key administrative tasks.<br>
+                            <span>Cheng Institute of Technology, NDU</span> 
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="timeline-icon">
+                        <img src="images/白色四角星.png" alt="Star Icon">
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024</h3>
+                        <p>
+                            <strong>Research Intern</strong><br>
+                            Streamlined TensorFlow model updates and real-time tracking using Docker-based workflows.<br>
+                            <span>Intelligence Group, NCSIST</span> 
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="timeline-icon">
+                        <img src="images/白色四角星.png" alt="Star Icon">
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>2024 - 2025</h3>
+                        <p>
+                            <strong>Vice President, CS Student Association</strong><br>
+                            Led budgeting and event planning to improve efficiency and student involvement.<br>
+                            <span>Chung Cheng Institute of Technology, NDU</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="timeline-icon">
+                        <img src="images/白色四角星.png" alt="Star Icon">
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>2024 - 2025</h3>
+                        <p>
+                            <strong>Teaching Assistant, Systems Engineering</strong><br>
+                            Guided students on systems modeling and prepared course materials.<br>
+                            <span>Chung Cheng Institute of Technology, NDU</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="timeline-icon">
+                        <img src="images/白色四角星.png" alt="Star Icon">
+                    </div>
+                    <div class="experience-content">
+                        <h3>2023 - 2024</h3>
+                        <p>
+                            <strong>Varsity Volleyball Team Captain</strong><br>
+                            Directed training and strategy, elevating team performance in competitions.<br>
+                            <span>Chung Cheng Institute of Technology, NDU</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-tags">
+                    <div class="personality">#Leadership</div>
+                    <div class="personality">#TechnicalExpertise</div>
+                    <div class="personality">#Teamwork</div>
+                    <div class="personality">#ProblemSolving</div>
+                    <div class="personality">#Innovation</div>
+                    <div class="personality">#Communication</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三區塊米白色畫布 -->
+        <section class="about-container3">
+            <div class="activities-section">
+                <h2 class="activities-title">Activities</h2>
+                <div class="activities-timeline">
+                    <div class="activities-item">
+                        <div class="timeline-icon">
+                            <img src="images/紅色四角星.png" alt="Star Icon">
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="activities-content">
+                            <h3>2024</h3>
+                            <p><strong>Taiwan Academic Network Conference</strong></p>
+                            <p>Published the paper "Real-time following system combining RSSI positioning and visual recognition" as the first author</p>
+                        </div>
+                    </div>
+                    <div class="activities-item">
+                        <div class="timeline-icon">
+                            <img src="images/紅色四角星.png" alt="Star Icon">
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="activities-content">
+                            <h3>2024</h3>
+                            <p><strong>National Collegiate Programming Contest Finalist</strong></p>
+                            <p>Finalist in a prestigious programming competition, showcasing innovative problem-solving in AI development</p>
+                        </div>
+                    </div>
+                    <div class="activities-item">
+                        <div class="timeline-icon">
+                            <img src="images/紅色四角星.png" alt="Star Icon">
+                        </div>
+                        <div class="activities-content">
+                            <h3>2023</h3>
+                            <p><strong>Flower Season Technology Implementation Competition</strong></p>
+                            <p>Won the Best Innovation Award for the "E-cart following vehicle" project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="language-section">
+                <h2 class="language-title">Language</h2>
+                <div class="language-container">
+                    <div class="language-item">
+                        <h3>English</h3>
+                        <p>Fluent</p>
+                    </div>
+                    <div class="language-item">
+                        <h3>Chinese</h3>
+                        <p>Native</p>
+                    </div>
+                    <div class="language-item">
+                        <h3>Japanese</h3>
+                        <p>Intermediate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Interests-section">
+                <h2 class="Interests-title">Interests & Expertise</h2>
+                <div class="Interests-container">
+                    <div class="Interest-item">
+                        <img src="images/music.png" alt="Music Icon" class="Interest-icon">
+                        <p>Classical Music<br>lyrical Song</p>
+                    </div>
+                    <div class="Interest-item">
+                        <img src="images/sing.png" alt="Singing Icon" class="Interest-icon">
+                        <p>Singing<br>Rapping</p>
+                    </div>
+                    <div class="Interest-item">
+                        <img src="images/volleyball.png" alt="Volleyball Icon" class="Interest-icon">
+                        <p>Volleyball</p>
+                    </div>
+                    <div class="Interest-item">
+                        <img src="images/go board.png" alt="Go Icon" class="Interest-icon">
+                        <p>Go</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四區塊深綠色畫布 -->
+        <section class="about-container4">
+            <div class="contents-section">
+                <div class="contents-header">
+                    <img src="images/紅色四角星.png" alt="Star Icon" class="contents-icon-1">
+                    <img src="images/紅色四角星.png" alt="Star Icon" class="contents-icon-2">
+                    <h2 class="contents-title">Contents</h2>
+                    <img src="images/紅色四角星.png" alt="Star Icon" class="contents-icon-3">
+                </div>
+                <div class="contents-container">
+                    <div class="content-item">
+                        <h3>Publication</h3>
+                        <p>RSSI Localization and<br>Vision-Based Following System</p>
+                    </div>
+                    <div class="content-item">
+                        <h3>Vision</h3>
+                        <p>Real-Time Image Recognition</p>
+                    </div>
+                    <div class="content-item">
+                        <h3>Robotics</h3>
+                        <p>RSSI Localization and<br>Vision-Based Following System</p>
+                    </div>
+                    <div class="content-item">
+                        <h3>Presentations</h3>
+                        <p>AI for Everyday Life<br>Gesture-Based Interaction in Robotics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五區塊黑色畫布 -->
+        <section class="about-container5">
+            <div class="focus-section">
+                <img src="images/橘色四角星.png" alt="Star Icon" class="contents-icon-4">
+                <img src="images/橘色四角星.png" alt="Star Icon" class="contents-icon-5">
+                <h2 class="focus-title">Artificial Intelligence</h2>
+                <img src="images/橘色四角星.png" alt="Star Icon" class="contents-icon-6">
+            </div>
+        </section>
+        
     </main>
 
     <!-- 底部 -->
-    <footer>
-        <p>Thank you for visiting! Let's build something amazing together.</p>
-    </footer>
+    
 </body>
 </html>

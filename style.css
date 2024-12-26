@@ -14,6 +14,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Folty Book';
+    src: url('fonts/Folty-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Folty Thin';
+    src: url('fonts/Folty-Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 全局設定 */
 * {
     margin: 0;
@@ -26,6 +40,7 @@ body {
     background-color: #344c36; /* 深綠色背景 */
     color: #d8d4c1;
     line-height: 1.6;
+    overflow-x: hidden; /* 隱藏水平溢出的內容 */
 }
 
 header {
@@ -48,8 +63,6 @@ header .logo img.star-icon {
     /*ff5739*/
     width: 70px; /* 調整圖片寬度 */
     height: 70px; /* 調整圖片高度 */
-    
-    
 }
 
 header nav ul {
@@ -63,14 +76,24 @@ header nav ul {
 }
 
 header nav a {
+    font-weight: bold;
     color: #d8d4c1;
     text-decoration: none;
     font-size: 1.4rem;
     font-family: 'Folty SemiBold', sans-serif;
 }
 
+header nav li:hover {
+    color: inherit; /* 保持原色 */
+    text-shadow: 0.5px 0 0 currentColor, 
+                 -0.5px 0 0 currentColor, 
+                 0 0.5px 0 currentColor, 
+                 0 -0.5px 0 currentColor; /* 模擬加粗效果 */
+    transition: text-shadow 0.3s ease; /* 平滑過渡 */
+}
+
 header .btn {
-    background: #f9ae15; /* 黃色按鈕 */
+    background: #ffcc4d; /* 黃色按鈕 */
     color: #344c36;
     padding: 0.4rem 1.5rem;
     border-radius: 30px;
@@ -78,6 +101,12 @@ header .btn {
     font-weight: bold;
     font-size: 1.1rem;
     font-family: 'Folty SemiBold', sans-serif;
+    transition: background-color 0.3s ease; /* 平滑過渡 */
+}
+
+header .btn:hover {
+    color: #344c36;
+    background: #ffb247; /* 保持背景顏色 */
 }
 
 .hero {
@@ -213,4 +242,823 @@ header .logo a {
 
 header .logo a:hover {
     opacity: 0.8; /* 滑鼠懸停時透明度效果 */
+}
+
+/**************************************/
+/********** About Me Section **********/
+/**************************************/
+
+
+header.about-page {
+    background-color: #f7f1e5; /* 米白色背景 */
+    color: #333;
+    position: relative;
+    z-index: 100;
+    padding: 0rem 2rem; /* 增加內邊距 */
+    min-height: 0px; /* 設定最小高度 */
+}
+
+header.about-page nav a {
+    color: #333; /* 導覽列文字顏色變為深灰色 */
+}
+
+header.about-page .btn {
+    background: #f9ae15; /* 保持黃色按鈕 */
+    color: #333; /* 深灰色文字 */
+    padding: 0.4rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Folty SemiBold', sans-serif;
+    transition: background-color 0.3s ease; /* 平滑過渡 */
+}
+
+header.about-page .btn:hover {
+    color: #333;
+    background: #ff8800; /* 保持背景顏色 */
+}
+
+header.about-page nav li:hover {
+    color: inherit; /* 保持原色 */
+    text-shadow: 0.5px 0 0 currentColor, 
+                 -0.5px 0 0 currentColor, 
+                 0 0.5px 0 currentColor, 
+                 0 -0.5px 0 currentColor; /* 模擬加粗效果 */
+    transition: text-shadow 0.3s ease; /* 平滑過渡 */
+}
+
+/* 第一區塊米白色背景 */
+.about-container1 {
+    display: flex;
+    justify-content: space-between; /* 左右對齊 */
+    align-items: center;
+    height: 95vh;
+    background-color: #f7f1e5; /* 米白色背景 */
+    padding: 0 10%;
+    position: relative; /* 確保定位基準 */
+}
+
+.intro-text {
+    max-width: 50%; /* 文字區塊最大寬度 */
+    color: #333; /* 深灰色文字 */
+    font-family: 'Folty SemiBold', sans-serif;
+    line-height: 1.5;
+    position: relative;
+    right: -40px;
+}
+
+.intro-text h1 {
+    font-size: 5.2rem;
+    font-family: 'Brasika Display', sans-serif;
+    line-height: 1.8; /* 增加行高 */
+    transform: scaleY(1.12); /* 垂直拉伸 */   
+    letter-spacing: 5px; /* 縮小字間距 */
+    margin: 0;
+    position: relative;
+    top: 15px;
+}
+
+.intro-text h2 {
+    font-size: 5.2rem;
+    font-family: 'Brasika Display', sans-serif;
+    transform: scaleY(1.12); /* 垂直拉伸 */   
+    letter-spacing: 5px; /* 縮小字間距 */
+    margin: 0;
+    position: relative;
+    top: 15px;
+}
+
+.intro-text p {
+    font-size: 1.3rem; /* 內文字體大小 */
+    max-width: 80%; /* 縮減左右寬度 */
+    color: #555; /* 稍淺的灰色 */
+    text-align: justify; /* 讓段落左右兩端對齊 */
+    text-justify: inter-word; /* 增強單詞之間的間距調整 */
+    line-height: 1.6; /* 調整行高讓內容更易讀 */
+    margin: 1rem 0; /* 上下留白間距 */
+    position: relative;
+    top: 20px;
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 35%;
+}
+
+.profile-image {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    transform: translate(-10%, 0%); /* 向左移動 10%，向上移動 5% */
+}
+
+.profile-image img {
+    width: 100%;
+    display: block;
+}
+
+.tag {
+    position: absolute;
+    background-color: #f9ae15; /* 黃色背景 */
+    color: #f7f1e5;
+    padding: 0.85rem 3.6rem;
+    border-radius: 40px;
+    font-family: 'Folty SemiBold', sans-serif;
+    font-size: 1.5rem;
+}
+
+.tag.top-left {
+    top: 50%; /* 偏上 */
+    left: -25%; /* 偏左 */
+}
+
+.tag.bottom-right {
+    bottom: 8%; /* 偏下 */
+    right: -16%; /* 偏右 */
+}
+
+.contact-card {
+    background-color: #1f2a1f; /* 黑色 Contact 區塊 */
+    color: #f7f1e5;
+    padding: 0.5rem 5rem 1.5rem 5rem;
+    position: absolute;
+    top: 98.6%;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100%;
+    z-index: 1; /* 確保在深綠色背景上 */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h3 {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.7rem;
+    letter-spacing: 5px; /* 縮小字間距 */
+    margin-bottom: 0.4rem;
+}
+
+/* 第二區塊深綠色背景 */
+.contact-card p {
+    font-family: 'Folty SemiBold', sans-serif;
+    font-size: 1.32rem;
+    line-height: 1.6;
+}
+
+.about-container2 {
+    background-color: #344c36; /* 深綠色背景 */
+    width: 100%; /* 占滿整個寬度 */
+    height: 128vh; /* 設定高度為視窗高度 */
+    margin-top: 0; /* 確保沒有重疊 */
+    padding: 3rem 5%; /* 上下內邊距，根據需要調整 */
+    display: flex; /* 保持彈性布局，方便之後添加內容 */
+    justify-content: center; /* 內容置中 */
+    flex-direction: column; /* 將內容垂直排列 */
+    align-items: center; /* 垂直置中 */
+    position: relative; /* 確保子元素能正確定位 */
+}
+
+.resume-background span {
+    /*display: block;*/
+    font-size: 6.8rem;
+    color: transparent; /* 讓文字填充透明 */
+    -webkit-text-stroke: 1px #f9ae15; /* 外框顏色為黃色，粗細2px */
+    margin: -2.3rem 0;
+    transform: scaleY(1.22); /*垂直拉伸比例*/ 
+    font-family: 'Brasika Display', sans-serif; /* 使用 Brasika Display 字體 */
+    display: flex; /* 啟用 Flexbox */
+    justify-content: center; /* 水平置中 */
+    position: relative; /* 設置相對定位 */
+    top: 540px;
+    left: 351px; 
+}
+
+.education-section {
+    position: relative;
+    top: 208px;
+    right: 270px; 
+    z-index: 2;
+    width: 80%;
+    max-width: 700px; /* 限制最大寬度 */
+    margin: 0 auto;
+    color: #f7f1e5; /* 米白色字體 */
+    padding: 2rem 0;
+    text-align: left; /* 左對齊文字 */
+}
+
+.education-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #f9ae15; /* 黃色標題 */
+    margin-bottom: 1.5rem;
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-left: 0;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start; /* 垂直左對齊 */
+    gap: 1rem;
+}
+
+.education-item .timeline-icon {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    right: 65px;
+}
+
+.education-item .timeline-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.education-item .timeline-icon .timeline-line {
+    position: absolute;
+    width: 0.5px;
+    height: calc(100% - 0.5rem); /* 調整線條長度 */
+    background-color: #ff5739;
+    top: 47px;
+    left: 26.5px; /* 確保線條和圖標對齊 */
+    z-index: 1;
+}
+
+.education-content {
+    position: relative;
+    right: 65px;
+}
+
+.education-content h3 {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 1.5rem;
+    color: #f7f1e5; 
+    margin-bottom: -1rem;
+    position: relative;
+    top: 10px;
+    right: 8px;
+}
+
+.education-content p {
+    font-family: 'Folty Thin', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #f7f1e5; 
+    position: relative;
+    bottom: 13px;
+    left: 195px;
+    font-weight: 100; /* 將字體設置為較細的權重 */
+}
+
+.education-content p strong {
+    font-family: 'Folty SemiBold', sans-serif;
+    font-size: 1.6rem;
+}
+
+.technical-skills-section {
+    position: relative;
+    top: 213px;
+    left: 380px;
+    padding: 2rem;
+    color: #f7f1e5;
+    max-width: 580px;
+    max-height: 420px;
+}
+
+.skills-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #f9ae15;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* 允許換行 */
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.skill-group {
+    margin-bottom: -0.5rem;
+}
+
+.skill-group h3 {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #f7f1e5;
+    letter-spacing: 1px; /* 縮小字間距 */
+}
+
+.skill-group ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Folty Thin', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.skill-group ul li {
+    margin-bottom: 0rem;
+}
+
+.column3 {
+    position: relative;
+    bottom: 326px;
+    left: 250px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* 每個標籤之間的間距 */
+    margin-top: 2rem;
+    justify-content: center; /* 標籤區域置中對齊 */
+    position: relative;
+    bottom:190px;
+    right: 15px;
+    max-width: 600px;
+}
+
+.expertise {
+    border-radius: 40px; /* 圓角 */
+    background-color: #333; /* 深色背景 */
+    color: #f7f1e5; /* 米白色文字 */
+    padding: 0.6rem 1.5rem; /* 調整內邊距讓標籤看起來更緊湊 */
+    font-family: 'Folty Thin', sans-serif; /* 字體樣式 */
+    font-size: 1.2rem; /* 字體大小 */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* 添加陰影 */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* 增加過渡效果 */
+}
+
+.experience-section {
+    background-color: #f9ae15; /* 黃色背景 */
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 758px;
+    position: relative;
+    right: 319px;
+    bottom: 232px;
+}
+
+.experience-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    left: 47px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: -1.9rem;
+}
+
+.experience-item .timeline-icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 2px;
+}
+
+.experience-item .timeline-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.experience-content h3 {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.experience-content p {
+    font-family: 'Folty Thin', sans-serif;
+    text-align: justify; /* 讓段落左右兩端對齊 */
+    text-justify: inter-word; /* 增強單詞之間的間距調整 */
+    font-size: 1.3rem;
+    line-height: 1.1;
+    position: relative;
+    bottom: 44px;
+    left: 209px;
+    max-width: 450px;
+}
+
+.experience-content p strong {
+    font-family: 'Folty SemiBold', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.experience-content p span {
+    font-family: 'Folty Book', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.experience-item .timeline-icon .timeline-line {
+    position: absolute;
+    width: 0.5px;
+    height: calc(100% + 3.3rem); /* 調整線條長度 */
+    background-color: #f7f1e5;
+    top: 32px;
+    left: 15px; /* 確保線條和圖標對齊 */
+    z-index: 1;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* 每個標籤之間的間距 */
+    margin-top: 2rem;
+    justify-content: center; /* 標籤區域置中對齊 */
+    position: relative;
+    bottom: 15px;
+    left: 60px;
+    max-width: 600px;
+}
+
+.personality {
+    border-radius: 40px; /* 圓角 */
+    background-color: #333; /* 深色背景 */
+    color: #f7f1e5; /* 米白色文字 */
+    padding: 0.6rem 1.5rem; /* 調整內邊距讓標籤看起來更緊湊 */
+    font-family: 'Folty Thin', sans-serif; /* 字體樣式 */
+    font-size: 1.2rem; /* 字體大小 */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* 添加陰影 */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* 增加過渡效果 */
+}
+
+/*.personality:hover {*/
+    /*background-color: #f9ae15;*/ /* 滑鼠懸停時的黃色背景 */
+    /*color: #333;*/ /* 滑鼠懸停時的深色文字 */
+    /*transform: scale(1.1);*/ /* 放大效果 */
+/*}*/
+
+/* 第三區塊米白色背景 */
+.about-container3 {
+    background-color: #f7f1e5; 
+    width: 100%; /* 占滿整個寬度 */
+    max-height: 115vh; /* 設定高度為視窗高度 */
+    margin-top: 0; /* 確保沒有重疊 */
+    padding: 3rem 5%; /* 上下內邊距，根據需要調整 */
+    display: flex; /* 保持彈性布局，方便之後添加內容 */
+    justify-content: center; /* 內容置中 */
+    flex-direction: column; /* 將內容垂直排列 */
+    align-items: center; /* 垂直置中 */
+    position: relative; /* 確保子元素能正確定位 */
+    z-index: -1;
+}
+
+.activities-section {
+    position: relative;
+    top: 460px;
+    right: 253px;
+    width: 758px;
+}
+
+.activities-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: 7px;
+}
+
+.activities-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem; /* 每個條目的間距 */
+    padding-left: 0;
+}
+
+.activities-item {
+    display: flex;
+    align-items: flex-start; /* 垂直左對齊 */
+    gap: 1rem; /* 時間與內容之間的間距 */
+    position: relative;
+}
+
+.activities-item .timeline-icon {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    right: 55px;
+    bottom: 15px;
+}
+
+.activities-item .timeline-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.activities-content h3 {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 1.5rem;
+    color: #333; 
+    margin-bottom: -1rem;
+    position: relative;
+    right: 67px;
+    bottom: 5px;
+}
+
+.activities-content p {
+    font-family: 'Folty Thin', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #333; 
+    position: relative;
+    left: 40px;
+    bottom: 24px;
+    text-align: justify; /* 讓段落左右兩端對齊 */
+    text-justify: inter-word; /* 增強單詞之間的間距調整 */
+    max-width: 590px;
+}
+
+.activities-content p strong {
+    font-family: 'Folty SemiBold', sans-serif;
+    font-size: 1.6rem;
+}
+
+.activities-item .timeline-icon .timeline-line {
+    position: absolute;
+    width: 0.5px;
+    height: calc(100% + 1.2rem); /* 調整線條長度 */
+    background-color: #ff5739;
+    top: 47px;
+    left: 26.5px; /* 確保線條和圖標對齊 */
+    z-index: 1;
+}
+
+.language-section {
+    position: relative;
+    bottom: 265px;
+    left: 395px;
+    width: 550px;
+}
+
+.language-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.language-container {
+    display: flex;
+    gap: 5.5rem; /* 語言項目之間的間距 */
+}
+
+
+
+.language-item h3 {
+    font-family: 'Brasika Display', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.language-item p {
+    font-family: 'Folty Thin', sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0;
+}
+
+.Interests-section {
+    position: relative;
+    left: 392px;
+    bottom: 160px;
+}
+
+.Interests-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.Interests-container {
+    display: flex;  
+    gap: 3rem; /* 圖標之間的間距 */
+    margin-top: 1rem;   
+    flex-wrap: wrap; /* 讓內容在小螢幕換行 */
+    max-width: 550px; /* 限制容器最大寬度 */
+    grid-template-columns: repeat(2, 1fr); /* 定義兩列的網格 */
+    gap: 1rem 5rem; /* 行距和列距，根據需要調整 */
+    position: relative;
+    left: 50px;
+}
+
+.Interest-item:nth-child(3) {
+    margin-left: 7rem; /* 增加第一項和第二項之間的水平距離 */
+}
+
+.Interest-item {
+    text-align: center; /* 每個興趣項目置中 */
+    width: 140px; /* 每個項目的最大寬度 */
+}
+
+.Interest-icon {
+    width: 75px; /* 圖標大小 */
+    height: 75px;
+    margin-bottom: 0.5rem; /* 圖標和文字之間的間距 */
+}
+
+.Interest-item p {
+    font-family: 'Folty Thin', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    color: #333;
+    margin: 0;
+}
+
+.about-container4 {
+    background-color: #344c36; /* 深綠色背景 */
+    color: #f7f1e5; /* 字體顏色 */
+    padding: 2rem 5rem;
+    height: 570px;
+}
+
+.contents-section {
+    position: relative;
+    top: 100px;
+}
+
+.contents-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 4.8rem;
+    color: #f7f1e5; /* 白色標題 */
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.contents-header {
+    display: flex;
+    gap: 1rem; /* 星星和標題之間的間距 */
+    margin-bottom: 3rem;
+    position: relative;
+    right: 80px;
+}
+
+.contents-icon-1 {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 80px;
+    bottom: 36px;
+}
+
+.contents-icon-1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contents-icon-2 {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 7px;
+    left: 27px;
+}
+
+.contents-icon-2 img {
+    width: 100%;
+    height: auto;
+}
+
+.contents-icon-3 {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    top: 80px;
+    right: 35px;
+}
+
+.contents-icon-3 img {
+    width: 100%;
+    height: auto;
+}
+
+.contents-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 適應較小螢幕 */
+    gap: 2rem;
+}
+
+.content-item {
+    text-align: center;
+    max-width: 400px;
+}
+
+.content-item h3 {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.5rem;
+    color: #f9ae15; /* 黃色文字 */
+    margin-bottom: 0.5rem;
+}
+
+.content-item p {
+    font-family: 'Folty Thin', sans-serif;
+    font-size: 1.2rem;
+    color: #d8d4c1; /* 米白色 */
+    line-height: 1.2;
+}
+
+.about-container5 {
+    background-color: #000; /* 黑色背景 */
+    height: 330px; /* 固定高度 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    position: relative;
+}
+
+.focus-section {
+    display: flex;
+    align-items: center; /* 星星與標題垂直置中 */
+    gap: 1rem; /* 星星和標題之間的間距 */
+    text-align: center;
+}
+
+.focus-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 4.8rem; /* 字體大小 */
+    transform: scaleY(1.09) ; /*垂直拉伸比例*/ 
+    letter-spacing: 4px; /* 字距 */
+    color: #f7f1e5; /* 白色文字 */
+    margin: 0;
+}
+
+
+.contents-icon-4 {
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    left: 110px;
+    bottom: 61px;
+}
+
+.contents-icon-4 img {
+    width: 100%;
+    height: auto;
+}
+
+.contents-icon-5 {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    bottom: 17px;
+    left: 37px;
+}
+
+.contents-icon-5 img {
+    width: 100%;
+    height: auto;
+}
+
+.contents-icon-6 {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    top: 35px;
+    right: 35px;
+}
+
+.contents-icon-6 img {
+    width: 100%;
+    height: auto;
 }
