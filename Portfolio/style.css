@@ -56,6 +56,8 @@ header {
 header .logo {
     font-family: 'Brasika Display', sans-serif; /* 使用 Brasika Display 字體 */
     font-size: 1.8rem;
+    position: relative;
+    bottom: 10px;
     /*font-weight: bold;*/
 }
 
@@ -230,6 +232,22 @@ footer {
     border-bottom-right-radius: 20px;
 }
 
+.Home-rights {
+    position: relative; /* 確保能夠正常排列 */
+    top: 0; /* 根據需求調整 */
+    background: #1f2a1f; /* 深色背景 */
+    padding: 1rem 2rem; /* 內距 */
+    text-align: right; /* 文字置中 */
+    font-size: 1rem; /* 字體大小 */
+    color: #d8d4c1; /* 字體顏色 */
+    font-family: 'Folty SemiBold', sans-serif; /* 字體 */
+    z-index: 3; /* 控制層級 */
+}
+
+.Home-rights p span {
+    margin: 0 0.5rem; /* 增加分隔符號的間距 */
+}
+
 header .logo a {
     text-decoration: none; /* 移除底線 */
     color: inherit; /* 使用繼承的顏色 */
@@ -243,6 +261,7 @@ header .logo a {
 header .logo a:hover {
     opacity: 0.8; /* 滑鼠懸停時透明度效果 */
 }
+
 
 /**************************************/
 /********** About Me Section **********/
@@ -957,8 +976,8 @@ header.about-page nav li:hover {
 
 .contents-icon-3 {
     flex-shrink: 0;
-    width: 55px;
-    height: 55px;
+    width: 40 px;
+    height: 40px;
     position: relative;
     top: 80px;
     right: 35px;
@@ -1061,4 +1080,288 @@ header.about-page nav li:hover {
 .contents-icon-6 img {
     width: 100%;
     height: auto;
+}
+
+
+/**************************************/
+/********** Project Section **********/
+/**************************************/
+
+
+
+.banner {
+    width: 100%;
+    height: 330px; /* 可根據需求調整高度 */
+    overflow: hidden;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖像填滿容器且保持比例 */
+}
+
+header.project-page {
+    background-color: #f7f1e5; /* 米白色背景 */
+    color: #333;
+    position: relative;
+    z-index: 100;
+    padding: 0rem 2rem; /* 增加內邊距 */
+    height: 100px; /* 設定最小高度 */
+}
+
+header.project-page .logo {
+    position: relative;
+    bottom: 22px;
+}
+
+header.project-page nav a {
+    color: #333; /* 導覽列文字顏色變為深灰色 */
+    position: relative;
+    bottom: 15px;
+}
+
+header.project-page .btn {
+    background: #f9ae15; /* 保持黃色按鈕 */
+    color: #333; /* 深灰色文字 */
+    padding: 0.4rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Folty SemiBold', sans-serif;
+    transition: background-color 0.3s ease; /* 平滑過渡 */
+}
+
+header.project-page .btn:hover {
+    color: #333;
+    background: #ff8800; /* 保持背景顏色 */
+}
+
+header.project-page nav li:hover {
+    color: inherit; /* 保持原色 */
+    text-shadow: 0.5px 0 0 currentColor, 
+                 -0.5px 0 0 currentColor, 
+                 0 0.5px 0 currentColor, 
+                 0 -0.5px 0 currentColor; /* 模擬加粗效果 */
+    transition: text-shadow 0.3s ease; /* 平滑過渡 */
+}
+
+.project-container1 {
+    width: 100%; /* 寬度填滿螢幕 */
+    aspect-ratio: 964 / 1029; /* 根據原始背景圖的寬高比例設定 */
+    background-image: url('images/Project背景圖.jpg'); /* 使用背景圖 */
+    background-size: cover; /* 背景填滿 */
+    background-position: center; /* 居中對齊 */
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.research-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 2.5rem;
+    position: relative;
+    top: 30px;
+}
+
+.project-container {
+    width: 100%; /* 寬度填滿螢幕 */
+    aspect-ratio: 964 / 1029; /* 根據原始背景圖的寬高比例設定 */
+    background-image: url('images/Project背景圖.jpg'); /* 使用背景圖 */
+    background-size: cover; /* 背景填滿 */
+    background-position: center; /* 居中對齊 */
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.research-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 2.5rem;
+    position: relative;
+    top: 30px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    position: relative;
+    top: 100px;
+    position: relative;
+}
+
+.second-column {
+    justify-content: left;
+    top: 200px;
+}
+
+.card {
+    position: relative;
+    width: 580px;
+    max-height: 510px;
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    transform-origin: center; /* 設置縮放基準 */
+}
+
+.card:hover {
+    transform: scaleY(1.12);
+    box-shadow: 0 0 36px rgba(0, 0.4, 0.4, 0.6);
+}
+
+.card-image {
+    width: 533px;
+    height: 416px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    top: -60px; /* 上移圖片部分 */
+    left: 23px;
+    transition: all 0.6s ease; /* 添加過渡效果 */
+}
+
+.card-image img {
+    width: 105%; /* 保持圖片略大於容器 */
+    height: 110%; /* 保持圖片略大於容器 */
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute; /* 讓圖片可以自由定位 */
+    top: 50%; /* 圖片的中心對齊容器中心 */
+    left: 50%; /* 圖片的中心對齊容器中心 */
+    transform: translate(-50%, -50%); /* 將圖片的中心點移回容器中心 */
+    transition: all 0.6s ease; /* 添加過渡效果 */
+}
+
+.card:hover .card-image {
+    width: 533px;
+    height: 208px;
+}
+
+.card:hover .card-image img {
+    width: 100%; /* 縮小圖片大小 */
+    height: 100%; /* 縮小圖片大小 */
+}
+
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    top: -60px; 
+}
+
+.card:hover .card-content {
+    transform: scaleY(0.89);
+    top: -77px; 
+}
+
+.card-content h3 {
+    font-family: 'Folty SemiBold', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    text-align: justify; /* 讓段落左右兩端對齊 */
+    text-justify: inter-word; /* 增強單詞之間的間距調整 */
+    color: #333;
+}
+
+.card-content h4 {
+    font-family: 'Folty Thin', sans-serif;
+    text-justify: inter-word; /* 增強單詞之間的間距調整 */
+    text-align: justify; /* 讓段落左右兩端對齊 */
+    font-size: 1.2rem;
+    line-height: 1.1;
+    color: #686868;
+    margin-bottom: 1rem;
+}
+
+.card-hover-content {
+    font-family: 'Folty Thin', sans-serif;
+    text-justify: inter-word; /* 增強單詞之間的間距調整 */
+    text-align: justify; /* 讓段落左右兩端對齊 */
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: #333;
+    opacity: 0; /* 初始透明 */
+    transform: translateY(20px); /* 初始向下偏移 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 過渡效果 */
+    transition-delay: 0s; /* 默認無延遲 */
+}
+
+.card:hover .card-hover-content {
+    opacity: 1; /* 完全顯示 */
+    transform: translateY(0); /* 回到原位 */
+    transition-delay: 0.2s; /* 懸停時延遲 0.2 秒 */
+}
+
+.card:not(:hover) .card-hover-content {
+    opacity: 0; /* 離開時直接透明 */
+    transform: translateY(20px); /* 恢復初始位置 */
+    transition-delay: 0s; /* 無延遲 */
+    transition: none; /* 無過渡效果 */
+}
+
+.read-more {
+    display: inline-block;
+    font-family: 'Folty Book', sans-serif;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #0057b3;
+}
+
+.Project-rights {
+    position: absolute; /* 確保能夠正常排列 */
+    top: 1918px; /* 根據需求調整 */
+    left: 922px;
+    font-size: 1rem; /* 字體大小 */
+    color: #333; /* 字體顏色 */
+    font-family: 'Folty SemiBold', sans-serif; /* 字體 */
+    z-index: 3; /* 控制層級 */
+}
+
+.Project-rights p span {
+    margin: 0 0.5rem; /* 增加分隔符號的間距 */
+}
+
+.project-container2 {
+    background-color: #344c36; /* 深綠色背景 */
+    height: 400px; /* 固定高度 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    position: relative;
+    top: 30px;
+}
+
+.publication-title {
+    font-family: 'Brasika Display', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #f7f1e5; /* 字體顏色 */
+    margin-bottom: 2.5rem;
+    position: relative;
+    top: 30px;
 }
